@@ -122,6 +122,8 @@ def update_post(post_id):
     if form.validate_on_submit():
         post.title = form.title.data
         post.content = form.content.data
+        like=0
+        dislike=0
         db.session.commit()
         flash('Your post has been updated!', 'success')
         return redirect(url_for('post', post_id=post.id))
@@ -130,6 +132,8 @@ def update_post(post_id):
         form.content.data = post.content
     return render_template('create_post.html', title='Update Post',
                            form=form, legend='Update Post')
+
+
 
 
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
@@ -183,3 +187,7 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
+    
+
+
+

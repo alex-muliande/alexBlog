@@ -17,6 +17,22 @@
       <p class="article-content">{{ post.content }}</p>
     </div>
   </article>
+
+
+  <div class=" col-xs-12 col-sm-12 col-md-8 col-lg-8 well post-well">
+    <li class="text-center">
+        <h2>{{post.title}}</h2>
+        <h3>{{post.description}}</h3>
+        <a href ="/post_review/{{post.id}}?like=1">Like: {{post.like}}</a>
+        <a href ="/post_review/{{post.id}}?dislike=1">Dislike: {{post.dislike}}</a>  
+        <h3 class="comment-create">
+            <a href="{{url_for('new_post')}}">Add Comment</a>                                                        
+        </h3>
+    </li>
+</div>
+
+
+
   <!-- Modal -->
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -36,4 +52,5 @@
       </div>
     </div>
   </div>
+
 {% endblock content %}

@@ -12,6 +12,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
 
     {% if title%}
     <title>Pitch - {{ title }}</title>
@@ -43,6 +44,8 @@
                         <a class="nav-item nav-link" href="{{url_for('new_post')}}">New Post</a>
                         <a class="nav-item nav-link" href="{{url_for('account')}}">Account</a>
                         <a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
+                        <a class="nav-item nav-link" href="{{url_for('logout')}}">{{ current_user.username}}</a>
+            
                         {% else %} 
                         <a class="nav-item nav-link" href="{{url_for('login')}}">Login</a>
                         <a class="nav-item nav-link" href="{{url_for('register')}}">Register</a>
