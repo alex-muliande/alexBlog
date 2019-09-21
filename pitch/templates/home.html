@@ -12,6 +12,17 @@
               <p class="article-content">{{ post.content }}</p>
             </div>
           </article>
-          
     {% endfor %}
+
+    {% for comment in comments %}
+    <article class="media content-section">
+            <div class="media-body">
+              <p class="article-content">{{ comment.content }}</p>
+            </div>
+          </article>
+
+    {% endfor %}
+
+
+
 {% endblock content%}
