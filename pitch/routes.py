@@ -109,8 +109,7 @@ def update_post(post_id):
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
-    return render_template('create_post.html', title='Update Post',
-                           form=form, legend='Update Post')
+    return render_template('create_post.html', title='Update Post', form=form, legend='Update Post')
 
 
 
@@ -166,8 +165,6 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
-
-
 
 # Comment section Route
 
