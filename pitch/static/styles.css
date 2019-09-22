@@ -80,3 +80,12 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+
+.pitch{
+  font-size: 25px;
+}
+.a{
+  text-decoration: underline;
+  text-align: center;
+}
