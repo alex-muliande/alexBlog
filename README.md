@@ -1,8 +1,9 @@
-# PITCH
+# AlexBLOG
 The project was done using python3.6
 
 ## Description
-An application that will make your time count,adding pitches as well as reviewing other peoples pitches.   
+An application that will make your time count,by posting blogs that wil change other some elses life. 
+my live page https://frozen-anchorage-31231.herokuapp.com/home  
 
 
 ## Author
@@ -18,13 +19,13 @@ Alex Muliande.
 
 4.As a user when you forget your password, you can be directed to your email where you can reset. 
 
-5.As a user you can add new posts and edit or update your posts
+5.As a user you can add new post and edit or update your posts
 
-6.As a user you can view the pitches you have created in your own profile.
+6.As a user you can view the blog you have created in your own profile.
 
-7.As a user you can see the pitches other users have posted.
+7.As a user you can see the blogs other users have posted.
 
-8.As a user you can delete your post.
+8.As a user you can delete your blog.
 
 ## Setup/Installation Requirements
 Python version 3.6
@@ -34,7 +35,7 @@ Gunicorn
 Internet connection
 
 ### Installation Process
-Navigate to my git repository https://github.com/alex-muliande/Pitch.git
+Navigate to my git repository https://github.com/alex-muliande/alexBlog.git
 
 Clone the project to your computer
 
