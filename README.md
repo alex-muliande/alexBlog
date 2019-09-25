@@ -9,6 +9,13 @@ my live page https://frozen-anchorage-31231.herokuapp.com/home
 ## Author
 Alex Muliande.
 
+
+
+
+## Screenshot 
+
+<img src="https://github.com/alex-muliande/alexBlog/blob/master/Screenshot%20from%202019-09-25%2015-39-15.png" width="1000">
+
 ## Behaviour Driven Development BDD 
 ### Functions of the Webapplication
 1.As a new user you can sign up and create a new account.
