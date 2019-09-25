@@ -14,13 +14,14 @@ from request import get_quotes
 def home():
     quotes = get_quotes()
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.paginate(page=page, per_page=2)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=2)
     return render_template('home.html', quotes=quotes, posts=posts)
 
 
 @app.route("/about")
 def about():
-    return render_template('about.html', title='About')
+    quotes = get_quotes()
+    return render_template('about.html', title='About', quotes=quotes)
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -183,7 +184,8 @@ def new_comment():
         return redirect(url_for('app.main'))
     return render_template('comment.html', title='New Comment',form=form, legend='New Comment')
 
-    
+
+
 
 
 
