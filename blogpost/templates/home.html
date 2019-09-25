@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% block content%}
+<br><br>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8" id="quote">
+    <p>{{quotes.quote}}</p>
+    <p>{{quotes.author}}</p>
+  </div>
+</div>
+
+{% for post in posts.items %}
+<article class="media content-section">
+
+  <div class="media-body">
+    <div class="article-metadata">
+      <img class="rounded-circle article-img"
+        src="https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      <a class="mr-2" href="#">{{ post.author.username }}</a>
+      <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+    </div>
+    <h2><a class="article-title" href="{{ url_for('post', post_id=post.id)}}">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+{% endfor %}
+
+{% for comment in comments %}
+<article class="media content-section">
+  <div class="media-body">
+    <p class="article-content">{{ comment.content }}</p>
+  </div>
+</article>
+
+{% endfor %}
+
+{% for post in posts.items %}
+{% for page_num in posts.iter_pages()%}
+  {% if page_num%}
+  {% else %}
+  {%endif%}
+{% endfor %}
+
+{% endblock content%}
