@@ -8,6 +8,7 @@ class TestUserModel(unittest.TestCase):
         self.user = user(password="minayojane")
 
 
+
     def test_password_setter(self):
         self.assertTrue(self.user.password_hash is not None)
 
