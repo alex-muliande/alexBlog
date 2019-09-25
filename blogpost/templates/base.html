@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +19,7 @@
     {% else %}
     <title>Blog</title>
     {% endif %}
+
 
 </head>
 
@@ -71,8 +73,8 @@
                     <h3>Our Sidebar</h3>
                     <p class='text-muted' >Quotes .
                         <ul class="list-group" id="text">
-                            <li class="list-group-item list-group-item-light" id="text1"><p>{{quotes.quote}}</p></li>
-                            <li class="list-group-item list-group-item-light" ><p>{{quotes.author}}</p></li>
+                            <a class="list-group-item list-group-item-light" id="text1" href="{{url_for('home')}}">Latest Post</a>
+                            <a class="list-group-item list-group-item-light" href="{{url_for('about')}}" > What we talk about</a>
                         </ul>
                     </p>
                 </div>
