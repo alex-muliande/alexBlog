@@ -1,1 +1,1 @@
-web gunicorn pitch:app
+web gunicorn blogpost:app
